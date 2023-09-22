@@ -1,0 +1,18 @@
+.main-container {
+  display: flex;
+  position: relative;
+  top: 24rem;
+  flex-direction: column;
+  height: auto;
+}
+
+.space {
+  min-height: 100vh;
+}
+
+.section {
+  min-height: 100vh;
+
+}
+
+.section-element {}
