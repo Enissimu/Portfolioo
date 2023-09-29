@@ -1,8 +1,12 @@
 import { useState } from "react";
 import "./navbar.css"
-const Navbar = ({ inView } :{inView:boolean}) => {
+interface InViewProps {
+  inView:boolean 
+children: never[]
+}
+const Navbar = ({ inView } :InViewProps) => {
     const [lang,setLang]=useState(true)
-    console.log(inView)
+    console.log(typeof inView,)
 
   return (
 
@@ -26,34 +30,37 @@ const Navbar = ({ inView } :{inView:boolean}) => {
         </div>
 
 
-        <div className="flex items-center">
+        <div className="nav-right">
 
 
 
 
-          <div className="flex flex-col  ">
+          <div className="nav-right-element">
             <a className="mr-6  text-sm text-white   ">
               About
             </a>
+            <div className="circle-container">
 
-            <div className="bg-white p-1 w-1 h-1 rounded-full  hover:bg-red-500 ease-in-out  "></div>
+            <div className="circle "></div>
+            </div>
+          
           </div>
 
-          <div className="flex flex-col text-align text-center">
-            <a className="mr-6  text-sm text-white ">
+          <div className="nav-right-element">
               Work
-            </a>
-            <div className="bg-white p-1 w-1 h-1 rounded-full"></div>
-            <div className="bg-white p-1 w-1 h-1 rounded-full "></div>
+            <div className="circle-container">
+
+            <div className="circle"></div>
+            <div className="circle "></div>
+            </div>
+          
           </div>
-          <div className="flex flex-col text-align text-center">
-            <a className="mr-6  text-sm   text-white  ">
+          <div className="nav-right-element">
               Contact
-            </a>
-            <div className="flex space-x-1 ">
-              <div className="bg-white p-1 w-1 h-1 rounded-full"></div>
-              <div className="bg-white p-1 w-1 h-1 rounded-full "></div>
-              <div className="bg-white p-1 w-1 h-1 rounded-full "></div>
+            <div className="circle-container">
+              <div className="circle"></div>
+              <div className="circle "></div>
+              <div className="circle "></div>
             </div>
           </div>
         </div>

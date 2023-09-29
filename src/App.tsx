@@ -4,6 +4,7 @@ import useRefs from './Hooks/useRefs'
 import { useEffect } from 'react'
 import useViews from './Hooks/useView'
 import Navbar from './components/header/Navbar'
+import ModelView from './components/canvas/ModelView'
 const App=()=> {
   const refArr=useRefs(4)
   const views=useViews(refArr)
@@ -15,10 +16,6 @@ const App=()=> {
   console.log(views)
 
 
-  for (let i = 0; i < 4; i++) {
-    console.log(typeof refArr[i])
-    
-  }
   switch (refArr) {
     case refArr:
       
@@ -35,7 +32,7 @@ const App=()=> {
 {/* cavnas start */}
       <div className="canvas">
         <div className="canvas-alt">
-          <p>CANVAS</p>
+        <ModelView views={views}></ModelView>
         </div>
       </div>
 {/* canvas end */}
