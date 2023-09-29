@@ -3,7 +3,7 @@ import './App.css'
 import useRefs from './Hooks/useRefs'
 import { useEffect } from 'react'
 import useViews from './Hooks/useView'
-
+import Navbar from './components/header/Navbar'
 const App=()=> {
   const refArr=useRefs(4)
   const views=useViews(refArr)
@@ -30,27 +30,37 @@ const App=()=> {
 
 
   return (
-    <div className="overflow-clip">
+    <div className="main">
 
-      <div className="canvas-container">
-        <div className="canvas">
+{/* cavnas start */}
+      <div className="canvas">
+        <div className="canvas-alt">
           <p>CANVAS</p>
-
         </div>
       </div>
+{/* canvas end */}
+
+
 
       <div className="main-container">
         <div className="space"></div>
 
         <div className="space"></div>
+{/* header start */}
+
         <header
+        ><div
           ref={refArr[0]}
           id="intersect-1"
-          className="Header"
-        >
-<section>HEADER</section>
-        </header>
+          className="Header">
+<Navbar inView={views.has("intersect-1")}>
 
+</Navbar>
+</div></header>
+{/* header end */}
+
+
+{/* sections start */}
         <div className="section">
           <div className="space"></div>
 
@@ -65,13 +75,20 @@ const App=()=> {
           <div ref={refArr[3]} id="intersect-4" className="section-element">
             <section>HIRE ME</section>
           </div>
+
         </div>
 
 
+
       </div>
-      <footer className="Footer">
+{/* sections end */}
+
+      <footer >
 
       </footer>
+
+
+
     </div>
 
 

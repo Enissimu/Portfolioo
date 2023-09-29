@@ -2,13 +2,12 @@ import React from "react";
 
 
 
-type HTMLDivAndElement=HTMLElement | HTMLDivElement
 
 
 
-const useRefs = (refNum: number): React.RefObject<HTMLDivAndElement>[] => {
+const useRefs = (refNum: number): React.RefObject<HTMLDivElement>[] => {
 
-  const refArr = React.useRef<React.RefObject<HTMLElement>[]>([]);  
+  const refArr = React.useRef<React.RefObject<HTMLDivElement>[]>([]);  
 
   for (let i = 0; i < refNum; i++) {
     if (refArr && refArr.current){

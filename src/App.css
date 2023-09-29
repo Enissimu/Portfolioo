@@ -12,7 +12,48 @@
 
 .section {
   min-height: 100vh;
+}
+
+.section-element {
+  min-height: 100vh; 
+}
+
+
+
+header{
+  position: sticky; 
+top: 0; 
+z-index: 10; 
+margin-left: 1rem; 
+font-size: 1.5rem;
+line-height: 2rem; 
 
 }
 
-.section-element {}
+footer{
+  position: fixed; 
+bottom: 0; 
+z-index: 10; 
+margin-left: 1rem; 
+width: 100%; 
+font-size: 1.5rem;
+line-height: 2rem; 
+}
+
+
+.main{
+  overflow: clip;
+
+}
+
+
+.canvas{
+position: fixed; 
+width: 100vw; 
+height: 100vh; 
+}
+
+.canvas-alt{
+align-self: center; 
+  
+}

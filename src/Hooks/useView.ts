@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
-type HTMLDivAndElement = HTMLElement | HTMLDivElement
 
-const useViews = (refs : React.RefObject<HTMLDivAndElement>[]) => {
+const useViews = (refs : React.RefObject<HTMLDivElement>[]) => {
   const [views, setViews] = useState(new Set<string>());
 
   useEffect(() => {
