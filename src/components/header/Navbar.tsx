@@ -15,8 +15,8 @@ const Navbar = ({ inView } :InViewProps) => {
       <nav >
         <div className="nav-left">
           <span className="name">
-            Gorkem Kantar
-          </span>
+            ZART ZORT
+          </span>   
           <div
           className="lang-container"
 

@@ -13,7 +13,7 @@ const App=()=> {
     window.history.scrollRestoration = "manual";
   }, []);
 
-  console.log(views)
+
 
 
   switch (refArr) {
