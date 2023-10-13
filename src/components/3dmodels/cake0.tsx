@@ -16,7 +16,7 @@ brown:THREE.Material
 
  function Model(props: JSX.IntrinsicElements['group']) {
   const { nodes, materials } = useGLTF('/cake0.gltf') as GLTFResult
-    const group = useRef<THREE.Group>();
+    const group = useRef<THREE.Group<THREE.Object3DEventMap>>();
   useFrame((_, delta) => {
     // group.current.rotation.x += 1 * delta
     group.current!.rotation.y += 0.8 * delta
@@ -26,7 +26,7 @@ brown:THREE.Material
     }
   })
   return (
-    <group {...props} dispose={null}>
+    <group {...props} position={[0, -0.5, 0]} ref={group} dispose={null}  >
 
     <mesh
         castShadow
