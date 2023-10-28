@@ -11,7 +11,7 @@ nav {
   align-items: center;
   gap: 1rem;
   margin-right: 1.5rem;
-  font-size: 0.875rem;
+  font-size: 0.9rem;
   line-height: 1.25rem;
   color: rgb(255 255 255);
 }
@@ -45,6 +45,12 @@ nav {
   border-radius: 9999px;
 }
 
+.circle-small{
+    background-color: white;  
+  width: 0.25rem;
+  height: 0.25rem;
+  border-radius: 9999px;
+}
 .circle-container {
   display: flex;
   justify-content: center;
@@ -52,17 +58,22 @@ nav {
 }
 
 .lang-container {
+  display: flex;
   border-width: 2px;
   text-align: center;
   border-radius: 50%;
-  width: 2.25rem /* 36px */;
-  height: 2.25rem /* 36px */;
+  width: 1.5rem ;
+  height: 1.5rem ;
   border-color: white;
   border-style: solid;
+  justify-content: center;
 }
 
 .lang-text {
-  font-size: 1.125rem;
+  font-size: 1rem;
   line-height: 1.75rem;
-  text-align: left;
+  padding-bottom: 2px;
 }
+
+
+
