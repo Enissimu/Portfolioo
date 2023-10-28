@@ -1,17 +1,75 @@
-import { useState } from "react";
+import { useState,useEffect } from "react";
 import "./navbar.css"
+import { useSpring ,animated} from '@react-spring/web'
+
+
+
 interface InViewProps {
   inView:boolean 
 children: never[]
 }
+
+
+const timing=150
+
 const Navbar = ({ inView } :InViewProps) => {
     const [lang,setLang]=useState(true)
-    console.log(typeof inView,)
 
-  return (
+  const [isBooped, setIsBooped] = useState(false);
 
 
-      
+  const [springs, api] = useSpring(() => ({
+        from: {
+        y: 0,
+      },
+             config: {
+      },
+
+  }))
+
+
+
+
+  useEffect(() => {
+        if (!isBooped) {
+      return;
+    }
+    const timeoutId = window.setTimeout(() => {
+      setIsBooped(false);
+    }, timing);
+    return () => {
+      window.clearTimeout(timeoutId);
+    };
+  }, [isBooped, timing]);
+
+
+
+
+
+      const handleClick = () => {
+        
+        api.start({
+      from: {
+        y: 0,
+      },
+      to:
+      [
+{
+        y: -5, 
+      },
+         
+{
+        y:0
+      },
+      ] 
+    }
+    )
+        setIsBooped(true);
+
+  }
+
+
+  return (      
       <nav >
         <div className="nav-left">
           <span className="name">
@@ -19,22 +77,13 @@ const Navbar = ({ inView } :InViewProps) => {
           </span>   
           <div
           className="lang-container"
-
-            onClick={() => setLang(!lang)}
-
-          >
+            onClick={() => setLang(!lang)}>
             <span className="lang-text" >{lang ? "Tr" : "En"}</span>
           </div>
 
           {/* <span className="self-end text-xs  whitespace-nowrap dark:text-white">en</span> */}
         </div>
-
-
         <div className="nav-right">
-
-
-
-
           <div className="nav-right-element">
             <a className="mr-6  text-sm text-white   ">
               About
@@ -57,8 +106,10 @@ const Navbar = ({ inView } :InViewProps) => {
           </div>
           <div className="nav-right-element">
               Contact
-            <div className="circle-container">
-              <div className="circle"></div>
+            <div className="circle-container" >
+              <animated.div onMouseEnter={handleClick} className="circle" style={{
+...springs
+              }}  onClick={handleClick}/>
               <div className="circle "></div>
               <div className="circle "></div>
             </div>

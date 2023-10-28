@@ -3,7 +3,7 @@ import './App.css'
 import useRefs from './Hooks/useRefs'
 import { useEffect } from 'react'
 import useViews from './Hooks/useView'
-import Navbar from './components/header/Navbar'
+import Navbar from './components/navbar/Navbar'
 import ModelView from './components/canvas/ModelView'
 const App=()=> {
   const refArr=useRefs(4)
