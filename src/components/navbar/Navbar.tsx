@@ -17,6 +17,7 @@ const Navbar = ({ inView }: InViewProps) => {
     <nav>
       <div className="nav-left">
         <span className="name">ZART ZORT</span>
+        {/*  NAME IS GONNA BE LIKE EXPANDABLE CHECK THIS LINK FOR ANIAMTION NEED ITS OWN COMPONENT https://codesandbox.io/s/yps54   ITS GONNA BE LIKE GORKEM<KURTULUS>KANTAR when hover colors are red and black and white for some reason i cannot comprehend */}
         <div className="lang-container" onClick={() => setLang(!lang)}>
           <span className="lang-text">{lang ? "Tr" : "En"}</span>
         </div>
@@ -45,6 +46,12 @@ const Navbar = ({ inView }: InViewProps) => {
                 
                 <Circle>
                   <SmallCircle></SmallCircle>
+                  <SmallCircle></SmallCircle>
+                  <SmallCircle></SmallCircle>
+                  <SmallCircle></SmallCircle>
+                  <SmallCircle></SmallCircle>
+                  <SmallCircle></SmallCircle>
+                
                 </Circle>
                 <Circle ></Circle>
                 <Circle  ></Circle>

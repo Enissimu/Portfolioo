@@ -38,17 +38,16 @@ nav {
 }
 
 .circle {
-  background-color: white;
-  padding: 0.25rem;
-  width: 0.25rem;
-  height: 0.25rem;
+  padding: 0.30rem;
+  width: 0.30rem;
+  height: 0.30rem;
   border-radius: 9999px;
 }
 
 .circle-small{
-    background-color: white;  
-  width: 0.25rem;
-  height: 0.25rem;
+  height: 0.1rem;
+  width: 0.1rem;
+  padding: 0.1rem;
   border-radius: 9999px;
 }
 .circle-container {
@@ -62,8 +61,8 @@ nav {
   border-width: 2px;
   text-align: center;
   border-radius: 50%;
-  width: 1.5rem ;
-  height: 1.5rem ;
+  width: 0.25rem ;
+  height: 0.25rem ;
   border-color: white;
   border-style: solid;
   justify-content: center;
@@ -77,3 +76,33 @@ nav {
 
 
 
+ .css-selector {
+    background: linear-gradient(203deg, #662424, #002187, #ffffff);
+    background-size: 600% 600%;
+
+    -webkit-animation: AnimationName 27s ease infinite;
+    -moz-animation: AnimationName 27s ease infinite;
+    -o-animation: AnimationName 27s ease infinite;
+    animation: AnimationName 27s ease infinite;
+}
+
+@-webkit-keyframes AnimationName {
+    0%{background-position:82% 0%}
+    50%{background-position:19% 100%}
+    100%{background-position:82% 0%}
+}
+@-moz-keyframes AnimationName {
+    0%{background-position:82% 0%}
+    50%{background-position:19% 100%}
+    100%{background-position:82% 0%}
+}
+@-o-keyframes AnimationName {
+    0%{background-position:82% 0%}
+    50%{background-position:19% 100%}
+    100%{background-position:82% 0%}
+}
+@keyframes AnimationName {
+    0%{background-position:82% 0%}
+    50%{background-position:19% 100%}
+    100%{background-position:82% 0%}
+}

@@ -1,6 +1,9 @@
 
 import { useSpring,animated } from "@react-spring/web";
 
+const  getRndInteger=(min:number, max:number)=> {
+  return String( Math.floor(Math.random() * (max - min) ) + min);
+}
 
 const SmallCircle=()=>{
 //RANDOMIZE THE MARGIN ,COLOR , MASS, ALL SORT OF VARIABLES 
@@ -38,7 +41,7 @@ return(
               className="circle-small"
               style={{
                 ...springs,
-                marginLeft:"5px"  
+                marginLeft: `${getRndInteger(0,5)}px`   
               }}
               onClick={handleClick}>
             </animated.div>
