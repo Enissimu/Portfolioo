@@ -51,7 +51,6 @@ const Navbar = ({ inView }: InViewProps) => {
                   <SmallCircle></SmallCircle>
                   <SmallCircle></SmallCircle>
                   <SmallCircle></SmallCircle>
-                
                 </Circle>
                 <Circle ></Circle>
                 <Circle  ></Circle>
