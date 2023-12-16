@@ -1,9 +1,16 @@
 
 import { useSpring,animated } from "@react-spring/web";
+import { useHover } from "@use-gesture/react";
 
 
 const Circle=(props)=>{
 
+
+  const doSomethingWith = (state) => {
+    console.log(state);
+  
+  }
+const bind = useHover((state) => doSomethingWith(state))
 
   const [springs, api] = useSpring(() => ({
     from: {
@@ -36,13 +43,14 @@ const Circle=(props)=>{
 return(
 
             <animated.div
-              onMouseEnter={handleClick}
+            {...bind(2)}
+              // onMouseEnter={handleClick}
               className="circle"
               style={{
                 ...springs,
               }}
-              onClick={handleClick}>
-            {props.children}
+              // onClick={handleClick}
+            >{props.children}
             </animated.div>
 )
 }

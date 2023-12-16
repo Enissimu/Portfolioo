@@ -37,13 +37,14 @@ const SmallCircle=()=>{
 return(
 
             <animated.div
-              onMouseEnter={handleClick}
+              // onMouseEnter={handleClick}
               className="circle-small"
               style={{
                 ...springs,
                 marginLeft: `${getRndInteger(0,5)}px`   
               }}
-              onClick={handleClick}>
+              // onClick={handleClick}
+              >
             </animated.div>
 )
 }

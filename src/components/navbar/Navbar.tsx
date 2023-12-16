@@ -10,7 +10,7 @@ interface InViewProps {
 
 const Navbar = ({ inView }: InViewProps) => {
   const [lang, setLang] = useState(true);
-
+  console.log(inView)
 
 
   return (
