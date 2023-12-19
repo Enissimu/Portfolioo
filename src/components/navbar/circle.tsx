@@ -6,11 +6,7 @@ import { useHover } from "@use-gesture/react";
 const Circle=(props)=>{
 
 
-  const doSomethingWith = (state) => {
-    console.log(state);
-  
-  }
-const bind = useHover((state) => doSomethingWith(state))
+
 
   const [springs, api] = useSpring(() => ({
     from: {
@@ -43,13 +39,11 @@ const bind = useHover((state) => doSomethingWith(state))
 return(
 
             <animated.div
-            {...bind(2)}
-              // onMouseEnter={handleClick}
+              onMouseEnter={handleClick}
               className="circle"
               style={{
                 ...springs,
               }}
-              // onClick={handleClick}
             >{props.children}
             </animated.div>
 )

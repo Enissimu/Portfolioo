@@ -18,32 +18,15 @@ const SmallCircle=()=>{
     },
   }));
 
-  const handleClick = () => {
-    api.start({
-      from: {
-        y: 0,
-        backgroundColor: "hsla(316,81%,62%,1)",
-      },
-      to: [
-        {
-          y: -100,
-          backgroundColor: "hsla(30,69%,62%,1)",
-        },
-
-      ],
-    });
-  };
 
 return(
 
             <animated.div
-              // onMouseEnter={handleClick}
               className="circle-small"
               style={{
                 ...springs,
                 marginLeft: `${getRndInteger(0,5)}px`   
               }}
-              // onClick={handleClick}
               >
             </animated.div>
 )

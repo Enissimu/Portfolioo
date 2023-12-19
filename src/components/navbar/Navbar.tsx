@@ -13,6 +13,12 @@ const Navbar = ({ inView }: InViewProps) => {
   console.log(inView)
 
 
+
+  const onMouseNavSection=()=>{
+    console.log("mouse enter")
+  }
+
+
   return (
     <nav>
       <div className="nav-left">
@@ -40,7 +46,7 @@ const Navbar = ({ inView }: InViewProps) => {
                 <Circle  ></Circle>
           </div>
         </div>
-        <div className="nav-right-element">
+        <div onMouseEnter={onMouseNavSection} className="nav-right-element">
           Contact
           <div className="circle-container">
                 
@@ -51,8 +57,8 @@ const Navbar = ({ inView }: InViewProps) => {
                   <SmallCircle></SmallCircle>
                   <SmallCircle></SmallCircle>
                   <SmallCircle></SmallCircle>
-                
                 </Circle>
+                
                 <Circle ></Circle>
                 <Circle  ></Circle>
   

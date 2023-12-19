@@ -44,7 +44,30 @@ nav {
   width: 0.30rem;
   height: 0.30rem;
   border-radius: 9999px;
+  animation: skewing 2s infinite;
 }
+
+
+
+@keyframes skewing {
+  0% { transform: skewX(6deg); }
+  10% { transform: skewX(-6deg); }
+  20% { transform: skewX(4deg); }
+  30% { transform: skewX(-4deg); }
+  40% { transform: skewX(2deg); }
+  50% { transform: skewX(-6deg); }
+  55% { transform: skewX(6deg); }
+  60% { transform: skewX(-5deg); }
+  65% { transform: skewX(5deg); }
+  70% { transform: skewX(-4deg); }
+  75% { transform: skewX(4deg); }
+  80% { transform: skewX(-3deg); } 
+  85% { transform: skewX(3deg); }
+  90% { transform: skewX(-2deg); } 
+  95% { transform: skewX(2deg); }
+  100%   { transform: skewX(1deg); }
+}
+
 
 .circle-small{
   height: 0.1rem;
