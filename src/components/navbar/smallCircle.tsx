@@ -1,22 +1,25 @@
 
 import { useSpring,animated } from "@react-spring/web";
+import { useEffect } from "react";
 
 const  getRndInteger=(min:number, max:number)=> {
   return String( Math.floor(Math.random() * (max - min) ) + min);
 }
 
-const SmallCircle=()=>{
+const SmallCircle=({hovered}:{hovered:boolean})=>{
 //RANDOMIZE THE MARGIN ,COLOR , MASS, ALL SORT OF VARIABLES 
-
   const [springs, api] = useSpring(() => ({
-    from: {
-      backgroundColor: "green",
-      y: 0,
-    },
     config: {tension:100,
       mass:5
     },
   }));
+
+  useEffect(() => {
+    api.start({
+      backgroundColor: hovered ? "#cbb19b" : "#dfe0e0",
+      y: hovered ? -15 : 0,
+    });
+  }, [hovered]);
 
 
 return(

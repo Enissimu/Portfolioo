@@ -1,22 +1,18 @@
 import { useState } from "react";
 import "./navbar.css";
-import Circle from "./circle";
-import SmallCircle from "./smallCircle";
+import NavRightContainer from "./navRightContainter";
 
 interface InViewProps {
   inView: boolean;
-  children: never[];
+  views: Set<string>;
 }
 
-const Navbar = ({ inView }: InViewProps) => {
+const Navbar = ({ inView,views }: InViewProps) => {
   const [lang, setLang] = useState(true);
-  console.log(inView)
+  console.log(inView, "inview")
+  console.log(views, "views3131")
 
 
-
-  const onMouseNavSection=()=>{
-    console.log("mouse enter")
-  }
 
 
   return (
@@ -31,39 +27,9 @@ const Navbar = ({ inView }: InViewProps) => {
         {/* <span className="self-end text-xs  whitespace-nowrap dark:text-white">en</span> */}
       </div>
       <div className="nav-right">
-        <div className="nav-right-element">
-          <a className="mr-6  text-sm text-white   ">About</a>
-          <div className="circle-container">
-          <Circle  ></Circle>
-   
-          </div>
-        </div>
-
-        <div className="nav-right-element">
-          Work
-          <div className="circle-container">
-             <Circle  ></Circle>
-                <Circle  ></Circle>
-          </div>
-        </div>
-        <div onMouseEnter={onMouseNavSection} className="nav-right-element">
-          Contact
-          <div className="circle-container">
-                
-                <Circle>
-                  <SmallCircle></SmallCircle>
-                  <SmallCircle></SmallCircle>
-                  <SmallCircle></SmallCircle>
-                  <SmallCircle></SmallCircle>
-                  <SmallCircle></SmallCircle>
-                  <SmallCircle></SmallCircle>
-                </Circle>
-                
-                <Circle ></Circle>
-                <Circle  ></Circle>
-  
-          </div>
-        </div>
+      <NavRightContainer text={"About"} howMany={1}   inView={views.has('intersect-2')} ></NavRightContainer>
+      <NavRightContainer  text={"Works"} howMany={2} inView={views.has('intersect-3')}></NavRightContainer>
+      <NavRightContainer  text={"Contact"} howMany={3} inView={views.has('intersect-4')}></NavRightContainer>
       </div>
     </nav>
   );

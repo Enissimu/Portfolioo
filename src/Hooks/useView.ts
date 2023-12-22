@@ -10,7 +10,7 @@ const useViews = (refs : React.RefObject<HTMLDivElement>[]) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
           if (entry.target.id.includes("intersect")) {
-            
+            console.log(entry.target,typeof entry.target)
             setViews((prev) => new Set([...prev, entry.target.id]));
 
             if (entry.target.id === "intersect-4") {

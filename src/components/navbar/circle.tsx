@@ -1,50 +1,118 @@
 
-import { useSpring,animated } from "@react-spring/web";
-import { useHover } from "@use-gesture/react";
+import { useSpring,animated } from "@react-spring/web"
+import { useHover } from "@use-gesture/react"
+
+interface circleProps{
+  inView: boolean
+  children: React.ReactNode
+}
 
 
-const Circle=(props)=>{
 
 
+
+
+
+const Circle=({inView,children} :circleProps)=>{
+
+
+ 	// #00541f 	
+	// #44c782 	
+	// #c7ff85 	
+	// #b9c743 	
+	// #ffe48f 	
+
+
+  // #cbb19b 	
+	// #bd977c 	
+	// #9b7960 	
+	// #66452a 	
+	// #dfe0e0
 
 
   const [springs, api] = useSpring(() => ({
     from: {
-      backgroundColor: "green",
+      backgroundColor: "#cbb19b",
+      transform: "skew(6deg)",
       y: 0,
     },
-    config: {},
-  }));
-
-  const handleClick = () => {
-    api.start({
-      from: {
-        y: 0,
-        backgroundColor: "hsla(316,81%,62%,1)",
-      },
-      to: [
+      to:
+      [
+    {
+      transform: "skew(-6deg)",
+        
+    },
         {
-          y: -5,
-          backgroundColor: "red",
-        },
-
+      transform: "skew(4deg)",
+        
+    },
         {
-          y: 0,
-          backgroundColor: "hsla(30,69%,62%,1)",
-        },
-      ],
-    });
-  };
+      transform: "skew(-4deg)",
+        
+    },
+            {
+      transform: "skew(2deg)",
+        
+    },
+        {
+      transform: "skew(-6deg)",
+        
+    },    {
+      transform: "skew(6deg)",
+        
+    },    {
+      transform: "skew(-5deg)",
+        
+    },    {
+      transform: "skew(5deg)",
+        
+    },    {
+      transform: "skew(-4deg)",
+        
+    },    {
+      transform: "skew(4deg)",
+        
+    },    {
+      transform: "skew(-3deg)",
+        
+    },    {
+      transform: "skew(3deg)",
+        
+    },
+            {
+      transform: "skew(-2deg)",
+    },
+
+            {
+      transform: "skew(2deg)",
+    },        {
+      transform: "skew(1eg)",
+        
+    },
+      ]
+  ,
+    config:{
+      
+      duration:"100"
+    },
+  
+    loop: true,
+  }))
+  console.log(springs,api)
+
+
+
+
 
 return(
 
             <animated.div
-              onMouseEnter={handleClick}
+
               className="circle"
               style={{
                 ...springs,
               }}
-            >{props.children}
+            >{children}
             </animated.div>
 )
 }

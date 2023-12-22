@@ -50,7 +50,7 @@ const App=()=> {
           ref={refArr[0]}
           id="intersect-1"
           className="Header">
-<Navbar inView={views.has("intersect-1")}>
+<Navbar views={views} inView={views.has("intersect-1")}>
 
 </Navbar>
 </div></header>
