@@ -28,7 +28,8 @@ return(
               className="circle-small"
               style={{
                 ...springs,
-                marginLeft: `${getRndInteger(0,5)}px`   
+                marginLeft: `${getRndInteger(0,5)}px`,   
+                marginRight: `${getRndInteger(0,5)}px`
               }}
               >
             </animated.div>

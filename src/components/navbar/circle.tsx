@@ -107,7 +107,6 @@ const Circle=({inView,children} :circleProps)=>{
 return(
 
             <animated.div
-
               className="circle"
               style={{
                 ...springs,
